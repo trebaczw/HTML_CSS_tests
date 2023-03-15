@@ -1,0 +1,32 @@
+/* reset styli zawsze na początek */
+* {
+	margin: 0;
+	padding: 0;
+	/* robi tak że ustawienie wielkości uwzględnia w ielkość dla borderów i padingów */
+	box-sizing: border-box;
+}
+
+div {
+	margin-top: 100px;
+	margin-left: 100px;
+	width: 100px;
+	top: 50px;
+}
+p {
+	margin-top: 10px;	
+	width: 100px;
+	height: 30px;
+	opacity: 0;
+	
+	
+}
+button:hover + p {
+	background-color:aqua;
+	margin-top: 10px;	
+	width: 100px;
+	height: 30px;
+	opacity: 1;
+	text-align: center;
+	
+	
+}
