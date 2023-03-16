@@ -24,7 +24,7 @@
 	/* flex-direction:column-reverse; */
 	justify-content: space-between;
 	/* align-items: center; */
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 .container2 div {
 	height: 40%;
@@ -34,26 +34,27 @@
 }
 .item2 {
 	background-color: orange;
+	flex-grow: 1;
 }
 .item3 {
 	background-color: green;
-    flex-grow: 1;
+	flex-grow: 1;
 }
 .item4 {
 	background-color: blue;
-    flex-grow: 1;
+	align-self: center ;
 }
 .item5 {
 	background-color: yellow;
-    order: 1;
-    flex-grow: 1;
+	order: 1;
+	flex-grow: 1;
 }
 .item6 {
 	background-color: bisque;
 }
 .item7 {
 	background-color: brown;
-    flex-basis: 60%;
+	flex-basis: 60%;
 }
 .item8 {
 	background-color: grey;
