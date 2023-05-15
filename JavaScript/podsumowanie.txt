@@ -1,0 +1,215 @@
+
+//Warunki if
+// if (a > b) {
+// 	console.log("większe!!");
+// } else {
+// 	console.log("mniejsze!!");
+// }
+// 
+
+// Warunki switch
+// let day = 3;
+// let dayName;
+
+// switch (day) {
+// 	case 1:
+// 		dayName = "pon";
+// 		break;
+// 	case 2:
+// 		dayName = "wt";
+// 		break;
+// 	case 3:
+// 		dayName = "śr";
+// 		break;
+// 	case 4:
+// 		dayName = "czw";
+// 		break;
+// 	case 5:
+// 		dayName = "pt";
+// 		break;
+// 	default:
+// 		dayName = "wpisz 1-5";
+// 		break;
+// }
+// console.log(dayName);
+
+// Funkcja
+// function sumaDwochLiczb(d, f) {
+// 	var x = d + f;
+// 	return x;
+// }
+// console.log(sumaDwochLiczb(2, 7));
+
+
+/ 1. Znajdź najmniejszą i największą wartość w tablicy:
+// let arr = [3, 7, 1, 9, 4, 6];
+// let min = arr[0];
+// let max = arr[0];
+
+// for ( let i = 0; i < arr.length; i++ ) {
+//   if ( arr[i] < min ) {
+//     min = arr[i]
+//     console.log(min);
+//   }
+//   if ( arr[i] > max ) {
+//     max = arr[i];
+//   }
+// }
+
+// arr.forEach( function (number) {
+//   if ( number < min ) {
+//     min = number;
+//   }
+//   if ( number > max ) {
+//     max = number;
+//   }
+// })
+
+// for( let number of arr ) {
+//   if ( number < min ) {
+//     min = number;
+//   }
+//   if ( number > max ) {
+//     max = number;
+//   }
+// }
+
+// Wykorzystanie Math.min i Math.max
+// let min = Math.min.apply(null, arr);
+// let max = Math.max.apply(null, arr);
+// console.log( `Min: ${min}, Max: ${max}` ); // Min: 1, Max: 9
+
+// Znajdź unikalne elementy w tablicy:
+// let arr = [ 1, 2, 3, 2, 4, 3, 5 ];
+// let unique = [];
+
+// arr.forEach( function( number ) {
+//   // console.log( 'current number is ', number)
+//   if ( !unique.includes( number ) ) {
+//     unique.push( number )
+//     // console.log(unique);
+//   }
+// })
+// console.log(unique); // [1, 2, 3, 4, 5]
+
+// Posortuj elementy w tablicy od największej do najmniejszej wartości:
+// const arr = [ 5, 2, 7, 1, 8, 3 ];
+// const arr2 = [ 5, 2, 7, 1, 8, 3 ];
+
+// // Od najmniejszej do największej
+// arr.sort( function(a, b) {
+//  return a - b;
+// })
+
+// // Od najwiekszej do najmniejszej
+// arr2.sort( function(a, b) {
+//  return b - a;
+// })
+
+// console.log(arr);
+// console.log(arr2);
+
+
+
+// Tworzenie obiektów
+// let person = {
+//   name: "Mateusz",
+//   test: 'test',
+//   date: 30
+// }
+
+// let person2 = new Object();
+// person2.name = "Jan";
+// person2.test = 40;
+// person2.city = null
+
+// console.log(person);
+
+// Właściwości obiektów
+// let person = {
+//   name: "Jan",
+//   age: 30,
+//   city: "Warsaw",
+// 	showText: function() {
+//     console.log("Lubię to miasto.");
+//   },
+//   "2023-03-30": "Czwartek"
+// };
+
+// 1 sposób
+// console.log( person.name )
+// console.log( person.age )
+// console.log( person.city )
+// console.log( person.showText() )
+// console.log( person.2023-03-30 ) // to jest błąd
+
+// 2 sposób
+// console.log( person['name'] )
+// console.log( person['age'] )
+// console.log( person['city'] )
+// console.log( person['showText'] )
+// console.log( person['2023-03-30'] )
+
+// for ( let key in person ) {
+//   console.log( `${key} - ${person[key]}` );
+//   // console.log( person[key] )
+// }
+
+// 1. Dodawanie właściwości do obiektów, usuwanie przy pomocy operatora 'delete'
+// const car = {
+//   make: 'Honda',
+//   model: 'Civic',
+//   year: 2019,
+// };
+
+// car.color = 'blue';
+// car['color'] = 'blue';
+// console.log(car);
+
+// car.brum = function() {
+//   console.log('brum brum')
+// }
+// car['brum'] = function() {
+//   console.log('brum brum')
+// }
+// console.log(car);
+// console.log(car.brum())
+
+// delete car.brum;
+// console.log(car);
+
+
+// 2. Kopiowanie obiektów Object.assign();
+// let a = {
+//     name : "kot",
+//     age: 7,
+//     speed: 10
+// }
+
+// let b = {
+//     name : "pies",
+//     age : 5
+// }
+// let targetObj = { a: 1, b: 2 };
+
+// let c = Object.assign({}, b, a, targetObj) // ilośc obiektów przekazanych dowolna 
+// console.log(c);
+
+
+
+// let targetObj = { a: 1, b: 2 };
+// let sourceObj = { b: 3, c: 4 };
+
+// Object.assign( targetObj, sourceObj )
+// console.log(targetObj)
+
+
+// 3. Kopiowanie obiektów Object.fromEntries();
+// let arr = [
+//   [ 'a', 3, 'test' ], // tylko 2 pierwsze wartości
+//   [ 'b', 2 ],
+//   [ 'c', 1 ],
+//   [ 'd' ] // pominięte
+// ]
+// let obj = Object.fromEntries(arr);
+// console.log(obj);
